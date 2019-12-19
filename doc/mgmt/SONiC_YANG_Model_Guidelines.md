@@ -8,12 +8,13 @@
  |:---:|:-----------:|:------------------:|-----------------------------------|
  | 1.0 | 22 Aug 2019 | Praveen Chaudhary  | Initial version                   |
  | 1.0 | 11 Sep 2019 | Partha Dutta       | Adding additional steps for SONiC YANG  |
+ | 1.1 | 19 Dec 2019 | Partha Dutta       | Update doc link  |
 
 ## References
 | References 		    |     Date/Version    |   		    Link     	 	|
 |:-------------------------:|:-------------------:|:-----------------------------------:|
 | RFC 7950                  | August 2016         | https://tools.ietf.org/html/rfc7950 |
-| Management Framework      | 0.9                 | https://github.com/Azure/SONiC/pull/436 |
+| Management Framework      | 0.11                 | https://https://github.com/Azure/SONiC/blob/master/doc/mgmt/Management%20Framework.md |
 
 ## Terminology and Acronyms
 | Acronyms 		    |    Description/Expansion      |
@@ -53,7 +54,8 @@ module sonic-acl {
 }
 ```
 
-### 3. Define namespace as "http://github.com/Azure/{model-name}".
+### 3. Define namespace as "http://github.com/Azure/{model-name}". Use small and meangingful prefix name like 'vlan', 'acl', 'vif' etc. While importing external YANG model, use same prefix name defined in the external model for maintainting consistency. 
+
 
 Example :
 ####  YANG
@@ -585,7 +587,7 @@ Example:
 
 #### YANG
 ```
-container sonic-acl {
+module sonic-acl {
 	....
 	....
 	rpc clear-stats {		
